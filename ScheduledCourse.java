@@ -5,6 +5,11 @@ public class ScheduledCourse extends Course {
         super(name,duration);
         this.start=start;
     }
+
+    public ScheduledCourse(Course course, int start) {
+        super(course.getName(), course.getDuration());
+        this.start=start;
+    }
     
     public int getStart() { return start; }
     public int getEnd() { return start + getDuration(); }
