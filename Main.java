@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Mi a targy neve?");
+        System.out.println("Name?");
         String name = sc.next();
-        System.out.println("Hany oras aa targy?");
+        System.out.println("Duration?");
         int duration = sc.nextInt();
         Course c = new Course(name, duration);
-        System.out.println("Mikor kezdodjon az ora?");
+        System.out.println("Start?");
         int start = sc.nextInt();
         ScheduledCourse s = new ScheduledCourse(c, start);
 
