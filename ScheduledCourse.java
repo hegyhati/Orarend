@@ -15,5 +15,5 @@ public class ScheduledCourse extends Course {
     public int getEnd() { return start + getDuration(); }
 
     @Override
-    public String toString() { return getName() + " (" + getStart() + " - " + getEnd() + ")"; }
+    public String toString() { return getName() + " (" + getStart() + ":00 - " + getEnd() + ":00)"; }
 }

@@ -11,5 +11,5 @@ public class Course {
     public int getDuration() { return duration; }
 
     @Override
-    public String toString() { return name + " (" + duration + ")"; }
+    public String toString() { return name + " (" + duration + " ora)"; }
 }
