@@ -8,7 +8,7 @@ public class Main {
         System.out.println("How many hours?");
         int duration = sc.nextInt();
         Course c = new Course(name, duration);
-        System.out.println("When does it start?");
+        System.out.println("When does it start? At what hour without minutes, e.g.: 6");
         int start = sc.nextInt();
         ScheduledCourse s = new ScheduledCourse(c, start);
 
