@@ -9,4 +9,7 @@ public class Course {
 
     public String getName() { return name; }
     public int getDuration() { return duration; }
+
+    @Override
+    public String toString() { return name + " (" + duration + ")"; }
 }

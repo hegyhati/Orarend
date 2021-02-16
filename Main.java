@@ -5,5 +5,8 @@ public class Main {
 
         Course c = new Course("Algebra",2);
         ScheduledCourse sc=new ScheduledCourse(c,4);
+
+        System.out.println(c);
+        System.out.println(sc);
     }
 }
