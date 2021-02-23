@@ -23,12 +23,13 @@ public class Main {
         start = sc.nextInt();
         ScheduledCourse s2 = new ScheduledCourse(c2, start);
 
-        
+
         System.out.println(s);
         System.out.println(s2);
 
         if(s.overlapsWith(s2)){
             System.out.println("They overlap.");
+            System.out.println("Can't do both at once);
         } else {
             System.out.println("They don't overlap.");
         }
