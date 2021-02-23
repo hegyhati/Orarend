@@ -12,7 +12,6 @@ public class Main {
         System.out.print("Start? ");
         int start = sc.nextInt();
         ScheduledCourse s = new ScheduledCourse(c, start);
-        System.out.println(s);
 
         System.out.print("Name? ");
         name = sc.next();
@@ -23,6 +22,7 @@ public class Main {
         start = sc.nextInt();
         ScheduledCourse s2 = new ScheduledCourse(c2, start);
 
+        System.out.println();
 
         System.out.println(s);
         System.out.println(s2);
