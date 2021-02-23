@@ -1,3 +1,5 @@
+name: Basic build test
+
 on: push
 jobs:
   Build_Project:
