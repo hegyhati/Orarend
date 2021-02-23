@@ -12,5 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: javac *.java
-      - run: java Main < test1.txt
-      - run: java Main < test2.txt
+      - run: java Main < test1.txt > test1_generated.txt
+      - run: diff test1_generated.txt test1_expected.txt
+      - run: java Main < test2.txt > test2_generated.txt
+      - run: diff test2_generated.txt test2_expected.txt
