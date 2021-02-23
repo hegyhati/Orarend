@@ -16,4 +16,8 @@ public class ScheduledCourse extends Course {
 
     @Override
     public String toString() { return getName() + " (" + getStart() + ":00 - " + getEnd() + ":00)"; }
+
+    public boolean overlapsWith(ScheduledCourse other){
+        return this.getStart() < other.getEnd() && other.getStart() < this.getEnd();
+    }
 }
