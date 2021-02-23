@@ -29,7 +29,7 @@ public class Main {
 
         if(s.overlapsWith(s2)){
             System.out.println("They overlap.");
-            System.out.println("Can't do both at once);
+            System.out.println("Can't do both at once");
         } else {
             System.out.println("They don't overlap.");
         }
