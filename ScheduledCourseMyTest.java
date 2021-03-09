@@ -1,5 +1,5 @@
 
-public class ScheduledCourseTest {
+public class ScheduledCourseMyTest {
     static ScheduledCourse sc1;
     static ScheduledCourse sc2;
 
