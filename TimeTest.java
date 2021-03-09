@@ -2,6 +2,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.jupiter.api.DisplayName;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+
 import org.junit.jupiter.api.Assertions;
 
 public class TimeTest {
@@ -28,5 +31,15 @@ public class TimeTest {
         Time t=new Time(min);
         Assertions.assertEquals(min/60,t.getHours(),"Wrong hours for int constructor.");
         Assertions.assertEquals(min%60,t.getMinutes(),"Wrong minutes for int constructor.");
+    }
+
+    @Test
+    void testIsBeforeNoon(){
+        assertAll( "foobar",
+            () -> {final Time t = new Time (11,15); Assertions.assertTrue(t.isBeforeNoon(), "Fancy error message");},
+            () -> {final Time t = new Time (1,15); Assertions.assertTrue(t.isBeforeNoon(), "Fancy error message");},
+            () -> {final Time t = new Time (12,15); Assertions.assertFalse(t.isBeforeNoon(), "Fancy error message");},
+            () -> {final Time t = new Time (12,00); Assertions.assertFalse(t.isBeforeNoon(), "Fancy error message");}
+        );
     }
 }

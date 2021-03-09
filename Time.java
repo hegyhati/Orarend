@@ -16,4 +16,8 @@ public class Time {
         return this.minutesSinceMidnight % 60;
     }
 
+    public boolean isBeforeNoon(){
+        return true;
+    }
+
 }
