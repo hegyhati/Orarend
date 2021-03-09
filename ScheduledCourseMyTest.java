@@ -25,7 +25,6 @@ public class ScheduledCourseMyTest {
     private static void testtGetEnd() {
         System.out.println("GETEND TEST");
         setup();
-        ScheduledCourse sc1=new ScheduledCourse("SZTA",4,8);
         assertEqual(sc1.getEnd(), 12, "Hibas getEnd");
         assertEqual(sc2.getEnd(), 14, "Hibas getEnd");
     }
