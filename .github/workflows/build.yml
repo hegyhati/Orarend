@@ -6,14 +6,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: javac *.java
+      - run: javac Course.java ScheduledCourse.java Main.java
   Run_Basic_IO_Tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: javac *.java
+      - run: javac Course.java ScheduledCourse.java Main.java
       - run: |
           for test in `ls tests/*.txt`; do
             java Main < $test > $test.generated
             diff $test.generated $test.out
           done
+  Run_JUnit_Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          mkdir lib
+          cd lib/
+          wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.1/junit-platform-console-standalone-1.7.1-all.jar
+          cd ..
+          mkdir reports
+      - run: javac -cp lib/junit-platform-console-standalone-1.7.1-all.jar *.java
+      - run: java -jar lib/junit-platform-console-standalone-1.7.1-all.jar -cp "." --scan-classpath --reports-dir="reports/"
+
