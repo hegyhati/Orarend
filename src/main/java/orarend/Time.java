@@ -1,3 +1,5 @@
+package orarend;
+
 public class Time {
     private int minutesSinceMidnight;
 

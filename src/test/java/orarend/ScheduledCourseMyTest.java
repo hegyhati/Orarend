@@ -1,3 +1,4 @@
+package orarend;
 
 public class ScheduledCourseMyTest {
     static ScheduledCourse sc1;

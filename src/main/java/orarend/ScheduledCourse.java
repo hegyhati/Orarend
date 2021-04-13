@@ -1,3 +1,5 @@
+package orarend;
+
 public class ScheduledCourse extends Course {
     private int start;
 
