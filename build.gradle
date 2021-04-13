@@ -17,10 +17,12 @@ test {
 	}
 }
 
-task customTask {
-    exec {
-        executable 'ls'
-        args './'
+tasks.register('customTask') {
+    doLast {
+        exec {
+            executable 'ls'
+            args './'
+        }
+        println 'Meh'
     }
-    println 'Meh'
 }
