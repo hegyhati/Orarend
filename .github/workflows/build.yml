@@ -6,14 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: javac *.java
-  Run_Basic_IO_Tests:
+      - run: ./gradlew build
+  Generate_Javadoc:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: javac *.java
-      - run: |
-          for test in `ls tests/*.txt`; do
-            java Main < $test > $test.generated
-            diff $test.generated $test.out
-          done
+      - run: ./gradlew javadoc
+
+
