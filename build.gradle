@@ -17,12 +17,7 @@ test {
 	}
 }
 
-tasks.register('customTask') {
-    doLast {
-        exec {
-            executable 'ls'
-            args './'
-        }
-        println 'Meh'
-    }
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
 }
